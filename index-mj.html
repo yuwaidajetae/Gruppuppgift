@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-mj.css">
     
     <!-- fonter från googlefont -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,39 +20,48 @@
   </head>
 
   <body>
+    <!-- container för bootstrap -->
     <div class="container">
 
-      <div class="content">
-      
-        <header class="head">
-        <a href="index-2.html">Tillbaka</a>
-        </header>
+      <header class="mj-head">
+        <!-- här använder jag loggan som layla tog fram till vårt projekt -->
+        <img class="mj-head-loga" src="images_mj/viagem1.jpg" alt="logga" width="280">
+        <a class="mj-head-link" href="index-2.html">Tillbaka</a>
+      </header>
 
-        <div class="bild-buzios"></div>
+      <div class="mj-bild-buzios"></div>
 
-        <main class="main">
-          <p class="main-text">
-            <H1>PREMIUM PAKET</H1>
-            <h2>Brasilien/Rio de janeiro/Buzios</h2>
-            <br>
-            En tre veckor lång resplan för Brasilien, 
-            inklusive ett besök i Buzios. Här kan du utforska olika aspekter av 
-            detta mångfaldiga land. Här är den resplan som ingår i premium priset:
-            <br>
-            <br>
+      <!-- content som ska förvara det mesta av mitt innehåll. Jag döper allt till mj
+      så the merge går bättre vid css -->
+      <div class="mj-content">    
+        
+        <main class="mj-main">
 
+          <p class="mj-main-text">
+
+            <div class="mj-main-intro">
+              <H1>PREMIUM PAKET</H1>
+              <h2>Brasilien/Rio de janeiro/Buzios</h2>
+              <br>
+              En tre veckor lång resplan för Brasilien, 
+              inklusive ett besök i Buzios. Här kan du utforska olika aspekter av 
+              detta mångfaldiga land. Här är den resplan som ingår i premium priset:
+              <br>
+              <br>
+            </div>
             <!-- jag gör separata divar i min main, så att jag 
             kan styla och flytta varje div lättare -->
-            <div class="vecka-1">
-            <h4>Vecka 1: Rio de Janeiro </h4>
-            <p>
-              Hotellet du kommer att bo på i Rio de Janeiro. 
-              <a href="hotell-rio.html">Klicka för mer info</a>
-              <div>
-                <img src="images/hotell-bild.jpg" alt="hotell i Rio de Janeiro" width="300">
-              </div>
-            </p>
-            <b>- Dag 1-3: Rio de Janeiro.</b> 
+            <div class="mj-vecka-1">
+              <h4>Vecka 1: Rio de Janeiro </h4>
+              <p>
+                Hotellet du kommer att bo på i Rio de Janeiro. <br>
+                <a href="hotell-rio.html">Klicka för mer info</a>
+                <div class="mj-vecka-1-images">
+                  <img src="images_mj/hotell-bild.jpg" alt="hotel i Rio de Janeiro" width="300">
+                  <img src="images_mj/hotel-lobby.jpg" alt="hotel lobby" width="300">
+                </div>
+              </p>
+              <b>- Dag 1-3: Rio de Janeiro.</b> 
               <ul>
                 <li>Utforska stränderna Copacabana och Ipanema.</li>
                 <li>Besök Kristusstatyn.</li>
@@ -63,40 +72,41 @@
 
 
 
-            <div class="vecka-2">
-              <h4>Vecka 2: Rio de Janeiro och i närheten</h4>
+            <div class="mj-vecka-2">
+              <h4>Vecka 2: Rio de Janeiro och i närheten</h4> <br>
               <b>- Dag 4-5: Dagstur till Petropolis.</b> 
               <ul>
                 <li>Besök Imperial Museum och Crystal Palace.</li>
               </ul>  
-              <img src="images/museum.jpg" alt="museum" width="300">
+              <img src="images_mj/museum.jpg" alt="museum" width="400">
               <br>
               <b>-Dag 6-7: Utforska mer av Rio</b> 
               <ul>
                 <li>Besök Sockertoppen.</li>
                 <li>Koppla av i den botaniska trädgården.</li>
                 <li>Utforska Rios historiska centrum.</li>
+                <img class="mj-vecka-2-stan" src="images_mj/rio-stan.jpg" alt="stan" width="400">
               </ul>               
             </div>
 
             
 
-            <div class="vecka-3">  
+            <div class="mj-vecka-3">  
               <h4>Vecka 3: Buzios och omgivande områden </h4>
               <p class="vecka-3-hotel-buzios">
-                Hotellet du kommer att bo på i Buzios. 
+                Hotellet du kommer att bo på i Buzios. <br>
                 <a href="hotell-buzios.html">Klicka för mer info</a>
                 <div>
-                  <img src="images/hotel-buzios.jpg" alt="hotell i Buzios" width="200">
-                  <img src="images/hotel.buzios-drink.jpg" alt="hotell i Buzios" width="200">
+                  <img class="mj-vecka-3-image1" src="images_mj/hotel-buzios.jpg" alt="hotell i Buzios" width="300"> &nbsp;&nbsp;&nbsp;
+                  <img class="mj-vecka-3-image2" src="images_mj/hotel.buzios-drink.jpg" alt="hotell i Buzios" width="300">
                 </div>
               </p>
-
+              <br>
               <b> - Dag 8-10: Res till Buzios.</b> 
               <ul>
                 <li>Ta en buss eller privat transfer till Buzios</li>
                 <li>Njut av de vackra stränderna som Praia de João Fernandes och Praia da Ferradura</li>
-                <img src="images/strand.jpg" alt="strand" width="300">
+                <img src="images_mj/strand.jpg" alt="strand" width="300">
               </ul>
 
               <b> - Dag 11-13: Vattenaktiviteter</b>
@@ -110,7 +120,7 @@
                 <li>Strosa runt i den charmiga stadskärnan</li>
                 <li>Besök Brigitte Bardot-statyn</li>
                 <li>Njut av det pulserande nattlivet</li>
-                <img src="images/fest.jpg" alt="stadslivet" width="300">
+                <img src="images_mj/fest.jpg" alt="stadslivet" width="300">
               </ul>     
 
               <b>-Dag 17-19: Utforska Costa do Sol</b>
@@ -118,8 +128,8 @@
                 <li>Res till närliggande strandstäder som Cabo Frio och Arraial do Cabo</li>
                 <li>Åk linbana</li>
                 <li>Ta en båttur för att se den blå grottan i Arraial do Cabo</li>
-                <img src="images/blå grotta.jpg" alt="blå grotta" width="200">
-                <img src="images/linbana.jpg" alt="linbana" width="200">
+                <img class="mj-vecka-3-blå-grotta" src="images_mj/blå grotta.jpg" alt="blå grotta" width="300">
+                <img  class="mj-vecka-3-blå-linbana" src="images_mj/linbana.jpg" alt="linbana" width="300">
               </ul> 
 
               <b>-Dag 20-21: Retur till Rio och avresa</b>
@@ -127,15 +137,14 @@
                 <li>Återvänd till Rio de Janeiro</li>
                 <li>Tillbringa din sista dag med att shoppa souvenirer eller koppla av på stranden</li>
                 <li>Avresa från Rio</li>
-                <img src="images/hemmresa.jpg" alt="hemmresa" width="300">
+                <img src="images_mj/hemmresa.jpg" alt="hemmresa" width="300">
               </ul> 
             </div>       
           </p>
         </main>
 
-
-        <section class="råd">
-          <div class="råd-text">
+        <section class="mj-råd">
+          <div class="mj-råd-text">
             <h5>Bra att veta, inför resan</h5>
             Kom ihåg att detta bara är ett förslag på resplan, 
             och du kan justera det baserat på dina intressen 
@@ -148,32 +157,36 @@
             covid-19-restriktioner innan din resa, 
             eftersom de kan ändras med tiden.
           </div>
-
-          <div class="råd-box">
-            <img class="box-1" src="images/grid-1.jpg" alt="" width="100">
-            <img class="box-2" src="images/grid-2.jpg" alt="" width="100">
-            <img class="box-3" src="images/grid-3.jpg" alt="" width="100">
-            <img class="box-4" src="images/grid-4.jpg" alt="" width="100">
-          </div>
         </section>  
+        
+        <section class="mj-råd-grid">
+          <div class="mj-råd-box">
+            <img class="mj-box-1" src="images_mj/grid-1.jpg" alt="" width="100">
+            <img class="mj-box-2" src="images_mj/grid-2.jpg" alt="" width="100">
+            <img class="mj-box-3" src="images_mj/grid-3.jpg" alt="" width="100">
+            <img class="mj-box-4" src="images_mj/grid-4.jpg" alt="" width="100">
+          </div>
+        </section>
+       
 
 
 
-        <form class="boka-grid">
-            <select name="grid" id="grid-1">
+        <form class="mj-boka-form">
+
+            <select name="mj-form-Avreseort" id="mj-form-1">
               <optgroup label="Avreseort">
                 <option value="Stockholm-Arlanda">Stockholm-Arlanda</option>
                 <option value="Stockholm-Arlanda">Stockholm-Bromma</option>
               </optgroup>
             </select>
             
-            <select name="grid" id="grid-2">
+            <select name="mj-form-resmål" id="mj-form-2">
               <optgroup label="resmål">
                 <option value="Brasilien/Rio de janeiro/Buzios">Brasilien/Rio de janeiro/Buzios</option>
               </optgroup>
             </select>
               
-          <select name="grid" id="grid-3">
+          <select name="mj-form-resenärer" id="mj-form-3">
             <optgroup label="Resenärer">
               <option value="Resenärer"> 1 vuxen </option>
               <option value="resenärer"> 2 vuxna</option>
@@ -184,52 +197,50 @@
         
           <div>
             <label for="boka">Skriv datum för önskad avfärd:</label>
-            
             <input type="text" placeholder="Skriv datum här">
           </div>
         
           <div>
             <label for="mail">Skriv din mail här, så kontaktar vi dig:</label>
-            
             <input class="input" type="email" name="email" id="email" placeholder="Skriv din mail här" > 
           </div>
           <button type="submit" value="submit" >Skick in</button>          
         </form>  
         
         
-        <footer class="footer">
-          <div class="footer-box">
-            <div class="footer-icons">
-              <a class="footer-icons-box-1" href="https://sv-se.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-              <a class="footer-icons-box-2" href="https://twitter.com/?lang=en"><i class="fa-brands fa-x-twitter"></i></a>
-              <a class="footer-icons-box-3" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i></a>
+        <footer class="mj-footer">
+          <div class="mj-footer-box">
+            <div class="mj-footer-icons">
+              <a class="mj-footer-icons-box-1" href="https://sv-se.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+              <a class="mj-footer-icons-box-2" href="https://twitter.com/?lang=en"><i class="fa-brands fa-x-twitter"></i></a>
+              <a class="mj-footer-icons-box-3" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i></a>
             </div>
 
-            <div class="footer-contacts">
-              <h5 class="footer-contacts-titel">Kontakta oss:</h5>
-              bla bla bla
+            <div class="mj-footer-contacts">
+              <h5 class="mj-footer-contacts-titel">Kontakta oss:</h5>
+              Viagem Brasil
               <br>
               Turebergs gatan 88
               <br>
               937 78 UPPSALA
               <br>
               <br>
-              <span class="footer-contacts_span">
+              <span class="mj-footer-contacts_span">
                 <i class="fa-solid fa-phone"> 073-839 92 82</i>               
               </span>
             </div>
-            <br>
-            <form class="månadsbrev">
-              <h6 class="månadsbrev_titel">Anmäl dig till månadsbrev:</h6>
+            
+            <form class="mj-månadsbrev">
+              <h6 class="mj-månadsbrev_titel">Anmäl dig till månadsbrev:</h6>
               <br>
               <label class="månadsbrev-mail" for="email">Skriv din mail här</label><br>
-              <input class="input" type="email" name="email" id="email" placeholder="Skriv mail här" > <br> 
-              <input class="footer-månadsbrev-button" type="submit">
+              <input class="mj-input" type="email" name="email" id="email" placeholder="Skriv mail här" > <br> <br>
+              <input class="mj-footer-månadsbrev-button" type="submit">
             </form>
           </div>
         </footer>
-      </div> 
-
+        
+      </div>  
     </div>  
   </body>
 </html>
