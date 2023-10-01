@@ -10,27 +10,7 @@ body{
   width: 100%;
   min-height: 100vh;
   font-family: 'Source Sans 3', sans-serif;
-}
-.mj-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  margin-bottom: 8%;
-  background-color: rgb(249, 243, 239);
-}
-.mj-main{
-  background-color: white;
-  opacity: 0.9;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  margin-top: -5%;
-  border-radius: 0.2em;
-  justify-content: center;
-  padding: 5%;
-  box-shadow: 1px 1px 8px rgb(202, 201, 201);
+  background-color:rgb(249, 243, 239);;
 }
 
 
@@ -62,7 +42,29 @@ body{
 }
 
 
+
 /* här startar mj-main */
+.mj-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 8%;
+  background-color: rgb(249, 243, 239);
+}
+.mj-main{
+  background-color: white;
+  opacity: 0.9;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -5%;
+  border-radius: 0.2em;
+  justify-content: center;
+  padding: 5%;
+  box-shadow: 1px 1px 8px rgb(202, 201, 201);
+}
 .mj-main-intro h1{
   text-decoration: underline orange;
 }
@@ -71,8 +73,6 @@ body{
   padding: 3%;
   margin-bottom: 8%;
 }
-
-
 /* vecka 1 */
 .mj-vecka-1 h4{
   border-bottom: 2px solid orange;
@@ -89,7 +89,6 @@ body{
 .mj-vecka-1-images img:hover{
   transform: scale(1.4);
 }
-
 /* mj-vecka-2 */
 .mj-vecka-2 h4{
   border-bottom: 2px solid orange;
@@ -110,7 +109,6 @@ body{
   border-bottom: 2px solid orange;
   display: inline;
 }
-
 .mj-vecka-3-image1:hover,.mj-vecka-3-image2:hover,.mj-vecka-3-blå-grotta:hover,.mj-vecka-3-blå-linbana:hover{
   transform: scale(1.4);
 }
@@ -134,12 +132,60 @@ body{
   line-height: 1.5;
 }
 
+
 /* mj-råd-grid */
-.mj-råd-grid{
-  padding-top: 5%;
-  padding-bottom: 8%;
-  flex-wrap: wrap;
+/* inställningar för min container för att centrera bilderna med mer */
+.mj-grid-wraper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 15%;
+  margin-top: 7%;
+  padding: 3%;
 }
+.mj-wraper{
+  position: relative;
+  overflow: hidden;
+}
+.mj-wraper img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+.mj-content-wrap{
+  position: absolute;
+  inset: 0;
+  font-size: 1.1rem;
+  padding: 4%;
+  background: rgba(255, 255, 255, 0.4);
+  padding-top: 5%;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+} 
+/* här sätter jag mitt blir och fade och zoom och grå skala */
+.mj-wraper img,.mj-content-wrap{
+  transition: 200ms ease-in-out;
+} 
+.mj-wraper:hover img.blur {
+
+  filter: blur(5px);
+}
+.mj-wraper:hover img.gray {
+  filter: grayscale(0.3);
+}
+.mj-wraper:hover img.zoom {
+  transform: scale(1.1);
+}
+/* här ser jag till att texten kommer in och ut vid hoover */
+.mj-wraper .mj-content-wrap, .fade {
+  opacity: 0;
+}
+.mj-wraper:hover .mj-content-wrap, .fade {
+  opacity: 1;
+}
+
 
 /* mj-boka-form */
 .mj-boka-form{
@@ -154,8 +200,8 @@ body{
   flex-wrap: wrap;
 }
 
-/* mj-footer */
 
+/* mj-footer */
 .mj-footer{
   margin: 5%;
   border-top: 3px solid orange;
@@ -192,6 +238,27 @@ a:hover{
 har samma inställningar på min heder som på de andra siderna
 för att hålla designen samma */
 
+.mj-content-bägare-rio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.mj-box-rio{
+  width: 80%;
+  background-color: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  top: -10%;
+  margin-top: -5%;
+  opacity: 0.9;
+  border-radius: 0.5em;
+  padding: 2%;
+  
+}
 .mj-bild-rio-hotel{
   background-size: cover;
   background-repeat: no-repeat;
@@ -203,6 +270,70 @@ för att hålla designen samma */
   padding-bottom: 4%;
   color: rgb(250, 184, 61);
 }
+
+
+/* min silder bar */
+.slider-box-rio {
+	padding: 2rem;
+}
+
+.slider-wrapper {
+	position: relative;
+	max-width: 35rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
+	scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+
+
+
+
+
 
 /* ny html för sida buzio mj */
 .mj-hotell-buzios{
