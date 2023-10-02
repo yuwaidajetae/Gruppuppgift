@@ -1,7 +1,4 @@
-font-family: 'Source Sans 3', sans-serif;
-/* här sätter jag grund inställningar
-där jag nollar det mesta för att få en tom
-duk */
+
 *{
   margin: 0;
   padding: 0;
@@ -10,7 +7,7 @@ duk */
   width: 100%;
   min-height: 100vh;
   font-family: 'Source Sans 3', sans-serif;
-  background-color:rgb(249, 243, 239);;
+  background-color:rgb(249, 243, 239);
 }
 
 
