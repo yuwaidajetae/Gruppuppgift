@@ -6,7 +6,7 @@ duk */
   margin: 0;
   padding: 0;
 }
-body{
+.mj-body{
   width: 100%;
   min-height: 100vh;
   font-family: 'Source Sans 3', sans-serif;
@@ -22,7 +22,7 @@ body{
   align-items: center;
   padding: 2%;
   padding-bottom: 2%;
-  border-bottom: 4px solid orange;
+  border-bottom: 4px solid orange; 
 }
 .mj-head-link{
   width: fit-content;
@@ -39,6 +39,7 @@ body{
   padding: 20%;
   margin-top: 3%;
   background-image: url(images_mj/brazil-natur.jpg);
+  border-radius: 0.2rem;
 }
 
 
@@ -56,7 +57,7 @@ body{
 .mj-main{
   background-color: white;
   opacity: 0.9;
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   margin-top: -5%;
@@ -72,6 +73,7 @@ body{
   border-bottom: 1px solid rgb(156, 154, 154);
   padding: 3%;
   margin-bottom: 8%;
+  text-align: center;
 }
 /* vecka 1 */
 .mj-vecka-1 h4{
@@ -105,6 +107,9 @@ body{
   padding: 2%;
   line-height: 2;
 }
+.mj-vecka-3 img{
+  gap:1rem;
+}
 .mj-vecka-3 h4{
   border-bottom: 2px solid orange;
   display: inline;
@@ -119,12 +124,13 @@ body{
   border-bottom: 2px solid orange;
   font-size: 2rem;
   text-align:center;
-  padding-bottom: 1%;
+  padding-bottom: 2%;
 }
 .mj-råd-text{
   text-wrap: balance;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 3%;
+  line-height: 1.5;
 }
 .mj-råd{
   padding: 5%;
@@ -170,10 +176,10 @@ body{
 } 
 .mj-wraper:hover img.blur {
 
-  filter: blur(5px);
+  filter: blur(15px);
 }
 .mj-wraper:hover img.gray {
-  filter: grayscale(0.3);
+  filter: grayscale(0.8);
 }
 .mj-wraper:hover img.zoom {
   transform: scale(1.1);
@@ -203,22 +209,31 @@ body{
 
 /* mj-footer */
 .mj-footer{
-  margin: 5%;
-  border-top: 3px solid orange;
+  border-top: 4px solid orange;
   padding-top: 4%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  
 }
 .mj-footer-box{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 5rem;
-  grid-auto-flow: column;
+  column-gap: 10rem;
   white-space: nowrap;
+  font-size: 1.2rem;
+}
+.mj-månadsbrev h6{
+  font-size: 1rem;
+  line-height: 0;
 }
 .mj-footer-icons{
   font-size: 2rem;
 }
 
-
+/* länkar inställningar för minna länkar */
 a link{
   color: gray;
 }
@@ -238,12 +253,22 @@ a:hover{
 har samma inställningar på min heder som på de andra siderna
 för att hålla designen samma */
 
-.mj-content-bägare-rio{
+.mj-content-rio{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  align-content: center;
+}
+.mj-content-bägare-rio{
+  display: flex;
+  justify-content: center;
+  text-wrap: wrap;
+  text-align:left;
+}
+.mj-main-text-rio h1{
+  border-bottom: 3px solid orange;
+  display:inline;
 }
 .mj-box-rio{
   width: 80%;
@@ -257,7 +282,8 @@ för att hålla designen samma */
   opacity: 0.9;
   border-radius: 0.5em;
   padding: 2%;
-  
+  text-wrap: wrap;
+  text-align: left;
 }
 .mj-bild-rio-hotel{
   background-size: cover;
@@ -270,11 +296,11 @@ för att hålla designen samma */
   padding-bottom: 4%;
   color: rgb(250, 184, 61);
 }
-
-
 /* min silder bar */
 .slider-box-rio {
 	padding: 2rem;
+  margin-top: 5%;
+  margin-bottom: 8%;
 }
 
 .slider-wrapper {
@@ -331,21 +357,14 @@ för att hålla designen samma */
 
 
 
-
-
-
-
-/* ny html för sida buzio mj */
+/* ny html för sida Bucaneiro  mj */
 .mj-hotell-buzios{
   background-size:cover;
   background-repeat: no-repeat;
   padding: 20%;
   margin-top: 3%;
-  
   background-image: url(images_mj/hotel-buzios.jpg);
 }
-
-
 
 
 
