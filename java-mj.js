@@ -1,6 +1,6 @@
 function formel(){
- alert("Tack för medelandet,vi hör av oss senast inom en vecka");
+ alert("Tack för meddelandet, vi hör av oss inom en arbetsvecka!");
 }
 function bekräftelse(){
-  alert("Tack, din mail är registrerad");
+  alert("Tack, din mail är registrerad!");
  }
