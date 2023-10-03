@@ -1,0 +1,91 @@
+/*typsnitt*/
+*{
+    font-family: montserrat;
+    /*FRAMSIDAN*/
+}
+.navbar-brand img{
+    width: 250px;
+}
+.section-padding{
+    padding: 100px 0;
+}
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+/*placering på text*/
+.carousel-caption{
+bottom: 220px;
+z-index: 2;
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px;
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+/*bakrundsfärg på bilderna*/
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0,0.5);
+    z-index: 1;
+}
+/*navbarens flikar försvinner*/
+.navbar-nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+/*sätter bredden på ett HTML-element till 100%*/
+.w-100{
+    height: 100vh;
+}
+.col{
+    padding: 20px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    width: 700px;
+}
+.footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 25px;
+}
+@media only screen and(min-width: 768px) and (max-width:991px) {
+    .carousel-caption{
+        bottom: 370px;
+    }
+    .carousel-caption p{
+        width: 100%;
+    }
+    
+}
+@media only screen and (max-width: 767px){
+    .carousel-caption{
+        bottom: 125px;
+    }
+    .carousel-caption h5{
+        font-size: 17px;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.6;
+
+    }
+}
