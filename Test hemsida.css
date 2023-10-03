@@ -1,0 +1,51 @@
+body{ max-width:100vw;
+    height: 1000px;
+    padding:0;
+    margin:0;
+   
+}
+
+img{
+    min-width: 100%;
+    height: 500px;
+}
+
+.centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+}
+
+.flex-container {
+    display:flex;
+    justify-content: center;
+    background-color:aliceblue;
+}
+
+.flex-container > div {
+    background-color: white;
+    width: 500px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 10px 10px;
+}
+
+.img-style {
+    border: 20px solid whitesmoke;
+    width: 10px;
+    height: 30 px;
+}
+
+.img-container {
+    display:flex;
+    width: 30%;
+    padding: 3px;
+    margin: 3px 3px;
+    justify-content: space-between;
+
+}
