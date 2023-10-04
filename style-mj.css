@@ -1,4 +1,6 @@
-
+/* vi har valt att ha separata css document
+då det kommer underlätta  mergen. Speciellt då
+css är lång, som i mitt fall. */
 *{
   margin: 0;
   padding: 0;
@@ -12,7 +14,14 @@
 
 
 /* inställningar till min header där jag anvädner loggan
-  som layla tog fram till gruppen */
+  som layla tog fram till gruppen. jag ändrade bakrunds färgen dock,så att den
+  skulle passa min bakrund */
+  /* jag använder bootstrap här för att kunna få menyn responsive. Men i övrigt
+  vill jag, medan jag lär mig hålla mig borta från
+  bootstrap och liknande för att säkerställa att jag inte glömmer det
+  jag lärt mig. Men även för att kunna exprimentera med olika lösningar som bootstrap
+  blockar om jag lägger in det i dokumentet. Så jag valde att bara ha det på min index och
+  inte på de andra sidorna så att jag kan leka lite mer med koden där. */
 .mj-head{
   display: flex;
   justify-content: space-around;
@@ -20,6 +29,10 @@
   padding: 2%;
   padding-bottom: 2%;
   border-bottom: 4px solid orange; 
+}
+.navbar navbar-expand-lg navbar-light bg-light{
+  background-color:rgb(249, 243, 239);
+  
 }
 .mj-head-link{
   width: fit-content;
@@ -38,10 +51,20 @@
   background-image: url(images_mj/brazil-natur.jpg);
   border-radius: 0.2rem;
 }
+h1,h2,h3,h4,h6{
+  text-decoration: underline orange;
+  display: inline;
+}
+.mj-button{
+  border-radius: 1em;
+  border: none;
+  padding: 3%;
+  color: white;
+  background-color: orangered;
+}
 
-
-
-/* här startar mj-main */
+/* Här startar själva innehållet i sidan,där jag informerar
+om vad premium paketet ska innehålla */
 .mj-content{
   display: flex;
   flex-direction: column;
@@ -63,8 +86,10 @@
   padding: 5%;
   box-shadow: 1px 1px 8px rgb(202, 201, 201);
 }
-.mj-main-intro h1{
-  text-decoration: underline orange;
+.mj-main-text img:hover{
+  transform: scale(1.4);
+  cursor: pointer;
+  padding: 1%;
 }
 .mj-main-intro{
   border-bottom: 1px solid rgb(156, 154, 154);
@@ -72,27 +97,16 @@
   margin-bottom: 8%;
   text-align: center;
 }
+
+/* vecka för vecka chemat */
+
 /* vecka 1 */
-.mj-vecka-1 h4{
-  border-bottom: 2px solid orange;
-  display: inline;
-}
 .mj-vecka-1{
   margin-bottom: 8%;
   border-bottom: 1px solid gray;
   line-height: 2;
 }
-.mj-vecka-1-images img{
-  padding: 1%;
-}
-.mj-vecka-1-images img:hover{
-  transform: scale(1.4);
-}
 /* mj-vecka-2 */
-.mj-vecka-2 h4{
-  border-bottom: 2px solid orange;
-  display: inline;
-}
 .mj-vecka-2{
   line-height: 2;
   margin-bottom: 6%;
@@ -104,13 +118,6 @@
   padding: 2%;
   line-height: 2;
 }
-.mj-vecka-3 img{
-  gap:1rem;
-}
-.mj-vecka-3 h4{
-  border-bottom: 2px solid orange;
-  display: inline;
-}
 .mj-vecka-3-image1:hover,.mj-vecka-3-image2:hover,.mj-vecka-3-blå-grotta:hover,.mj-vecka-3-blå-linbana:hover{
   transform: scale(1.4);
 }
@@ -118,29 +125,27 @@
 
 /* mj-råd-text */
 .mj-råd h5{
-  border-bottom: 2px solid orange;
+  border-bottom: 3px solid orange;
   font-size: 2rem;
   text-align:center;
   padding-bottom: 2%;
 }
 .mj-råd-text{
-  text-wrap: balance;
   text-align: center;
   padding-top: 3%;
   line-height: 1.5;
-}
-.mj-råd{
   padding: 5%;
   padding-top: 10%;
   line-height: 1.5;
 }
 
 
-/* mj-råd-grid */
+
+/* mj-grid-wraper*/
 /* inställningar för min container för att centrera bilderna med mer */
 .mj-grid-wraper{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   margin-bottom: 15%;
   margin-top: 7%;
   padding: 3%;
@@ -167,7 +172,8 @@
   font-weight: bold;
   cursor: pointer;
 } 
-/* här sätter jag mitt blir och fade och zoom och grå skala */
+/* här sätter jag mitt blur och fade och zoom och grå skala, så att det
+passar med sidan.svårt att få texten synlig dock trots svart. */
 .mj-wraper img,.mj-content-wrap{
   transition: 200ms ease-in-out;
 } 
@@ -181,7 +187,7 @@
 .mj-wraper:hover img.zoom {
   transform: scale(1.1);
 }
-/* här ser jag till att texten kommer in och ut vid hoover */
+/* här ser jag till att texten kommer in och ut vid hoover,sammtidigt */
 .mj-wraper .mj-content-wrap, .fade {
   opacity: 0;
 }
@@ -198,10 +204,12 @@
   box-shadow: 1px 1px 8px rgb(184, 183, 183);
   padding: 5%;
   padding-bottom: 10%;
-  background-color: white;
+  background-color: rgb(253, 195, 87);
   margin-bottom: 5%;
   flex-wrap: wrap;
+  border-radius: 0.5em;
 }
+
 
 
 /* mj-footer */
@@ -210,26 +218,23 @@
   padding-top: 4%;
   padding-bottom: 5%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  
+  justify-content: space-around;
+  text-wrap: wrap; 
 }
-.mj-footer-box{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 10rem;
-  white-space: nowrap;
+.mj-footer-contacts{
+ flex-direction: row;
+ display: flex;
+ justify-content: center;
+ gap: 7rem;
+ align-items: center;
+ align-content: center;
+}
+.mj-månadsbrev{
   font-size: 1.2rem;
-}
-.mj-månadsbrev h6{
-  font-size: 1rem;
-  line-height: 0;
 }
 .mj-footer-icons{
   font-size: 2rem;
 }
-
 /* länkar inställningar för minna länkar */
 a link{
   color: gray;
@@ -243,44 +248,31 @@ a:hover{
 
 
 
-
 /* Ny HTML sida för mj-rio */
 
-/* här sätter jag minna inställningar till min header, jag 
-har samma inställningar på min heder som på de andra siderna
-för att hålla designen samma */
+/* här sätter jag minna inställningar till min header, Här använder jag ej
+bootstrap och har enbart en länk tillbacka till min index. detta för
+att kunna leka med koden mer,så skippar jag bootstrap */
 
 .mj-content-rio{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-.mj-content-bägare-rio{
-  display: flex;
-  justify-content: center;
-  text-wrap: wrap;
-  text-align:left;
-}
-.mj-main-text-rio h1{
-  border-bottom: 3px solid orange;
-  display:inline;
-}
-.mj-box-rio{
-  width: 80%;
-  background-color: white;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  top: -10%;
   margin-top: -5%;
+  border-radius: 0.2em;
+  justify-content: center;
+  padding: 5%;
+}
+.mj-main-rio{
+  background-color: white;
   opacity: 0.9;
-  border-radius: 0.5em;
-  padding: 2%;
-  text-wrap: wrap;
-  text-align: left;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -5%;
+  border-radius: 0.2em;
+  justify-content: center;
+  padding: 5%;
+  box-shadow: 1px 1px 8px rgb(202, 201, 201);
 }
 .mj-bild-rio-hotel{
   background-size: cover;
@@ -293,19 +285,21 @@ för att hålla designen samma */
   padding-bottom: 4%;
   color: rgb(250, 184, 61);
 }
-/* min silder bar */
+
+
+/* min silder bar, det är bland annat denna bar jag refererar till,varför jag 
+tar bort bootstrap.bootstrap verkar blockera de inställningarna jag satt.
+kanske för att bootstrap readan har det färdigt. men jag vill endså gör min kod. */
 .slider-box-rio {
 	padding: 2rem;
   margin-top: 5%;
   margin-bottom: 8%;
 }
-
 .slider-wrapper {
 	position: relative;
-	max-width: 35rem;
+	max-width: 40rem;
 	margin: 0 auto;
 }
-
 .slider {
 	display: flex;
 	aspect-ratio: 16 / 9;
@@ -314,21 +308,17 @@ för att hålla designen samma */
 	scroll-behavior: smooth;
 	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
 	border-radius: 0.5rem;
-	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-	scrollbar-width: none; /* Hide scrollbar Firefox */
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* gömmer här min scrollbar */
 .slider::-webkit-scrollbar {
 	display: none;
 }
-
 .slider img {
 	flex: 1 0 100%;
 	scroll-snap-align: start;
 	object-fit: cover;
 }
-
 .slider-nav {
 	display: flex;
 	column-gap: 1rem;
@@ -338,7 +328,6 @@ för att hålla designen samma */
 	transform: translateX(-50%);
 	z-index: 1;
 }
-
 .slider-nav a {
 	width: 0.8rem;
 	height: 0.8rem;
@@ -347,14 +336,12 @@ för att hålla designen samma */
 	opacity: 0.75;
 	transition: opacity ease 250ms;
 }
-
 .slider-nav a:hover {
 	opacity: 1;
 }
 
 
-
-/* ny html för sida Bucaneiro  mj */
+/* ny html för sida Bucaneiro-mj */
 .mj-hotell-buzios{
   background-size:cover;
   background-repeat: no-repeat;
@@ -362,20 +349,18 @@ för att hålla designen samma */
   margin-top: 3%;
   background-image: url(images_mj/hotel-buzios.jpg);
 }
+.mj-titel-buzi{
+  font-size: 3rem;
+}
 
-
-
-
-
-/* media querys till mj-huvud index*/
-
-@media screen and (max-width:765px) {
-  .mj-footer-box{
+/* media querys till mj-huvud index-footer. vill ha footer som column
+vid mindre screens*/
+@media screen and (max-width:800px) {
+  .mj-footer-contacts{
     display: flex;
     flex-direction: column;
+    gap: 0;
     justify-content: center;
-    align-items: center;
-    align-content: center;
-    white-space: nowrap;
+    text-align: center;
   }
 }

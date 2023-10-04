@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Premium-paketet</title>
     <link rel="stylesheet" href="style-mj.css">
     
     <!-- fonter från googlefont -->
@@ -21,11 +21,44 @@
   </head>
 
   <body class="mj-body">
-  
+  <!-- här använder jag bootstrap för att få menyn responsive -->
     <header class="mj-head">
-      <!-- här använder jag loggan som layla tog fram till vårt projekt -->
-      <img class="mj-head-loga" src="images_mj/viagem1.jpg" alt="logga" width="280">
-      <a class="mj-head-link" href="index-2.html">Tillbaka till huvudsidan</a>
+      <nav class="navbar navbar-expand-lg">
+
+        <div class="container-fluid">
+          <a class="navbar-brand" href="images_mj/viagem1.jpg"><img src="images_mj/viagem1.jpg" alt="logga" width="200"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="gruppuppgift.html">HEM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="om-oss.html">OM OSS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="kontakt.html">KONTAKT</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  VÄLJ PAKET HÄR
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Standardpaket</a></li>
+                  <li><a class="dropdown-item" href="#">Lyxpaket</a></li>
+                  <li><a class="dropdown-item" href="familjepaket.html">Familjepaket</a></li>                               
+                </ul>
+              </li>             
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
     </header>
 
     <div class="mj-bild-buzios"></div>
@@ -36,14 +69,13 @@
     <div class="container">
 
       <div class="mj-content">    
-        
         <main class="mj-main">
-
           <div class="mj-main-text">
 
             <div class="mj-main-intro">
-              <H1>PREMIUM PAKET</H1>
+              <H1>PREMIUM PAKET</H1> <br>
               <h2>Brasilien/Rio de Janeiro/Buzios</h2>
+              <br>
               <br>
               En tre veckor lång resplan för Brasilien, 
               inklusive ett besök i Buzios. Här kan du utforska olika aspekter av 
@@ -59,7 +91,7 @@
                 Ni kommer att bo på hotellet Grand Hyatt Rio De Janeiro. <br>
                 <a href="hotell-Grand-Hyat-Rio-De-Janeiro.html" target="_blank" >Klicka för mer information om hotellet</a>
                 <div class="mj-vecka-1-images">
-                  <img src="images_mj/hotell-bild.jpg" alt="hotel i Rio de Janeiro" width="250">
+                  <img src="images_mj/hotell-bild.jpg" alt="hotel i Rio de Janeiro" width="250">&nbsp;&nbsp;&nbsp;
                   <img src="images_mj/hotel-lobby.jpg" alt="hotel lobby" width="250">
                 </div>
               </div>
@@ -71,8 +103,6 @@
                 <li> Njut av nattlivet i Lapa.</li>
               </ul>
             </div>
-
-
 
             <div class="mj-vecka-2">
               <h4>Vecka 2: Rio de Janeiro och i närheten</h4> <br>
@@ -90,8 +120,6 @@
               </ul>  
               <img class="mj-vecka-2-stan" src="images_mj/rio-stan.jpg" alt="stan" width="250">             
             </div>
-
-            
 
             <div class="mj-vecka-3">  
               <h4>Vecka 3: Buzios och omgivande områden </h4>
@@ -131,7 +159,7 @@
                 <li>Åk linbana</li>
                 <li>Ta en båttur för att se den blå grottan i Arraial do Cabo</li>
               </ul> 
-              <img class="mj-vecka-3-blå-grotta" src="images_mj/blå-grotta.jpg" alt="blå grotta" width="250">
+              <img class="mj-vecka-3-blå-grotta" src="images_mj/blå-grotta.jpg" alt="blå grotta" width="250">&nbsp;&nbsp;&nbsp;
               <img  class="mj-vecka-3-blå-linbana" src="images_mj/linbana.jpg" alt="linbana" width="250">
               <br>
               <b>-Dag 20-21: Retur till Rio och avresa</b>
@@ -163,8 +191,12 @@
       
         <!-- testar här något nytt
         jag skapar en bild med hover funktion där text ska synas
-        jag skapar först en box som håller mitt innehåll -->
+        jag skapar först en box som håller mitt innehåll,och sätter sedan olika
+        animationer på de olika divarna, för att göra texten synlig.
+        jag väljer ävcen att zomma in bakrundsbilden och sätter en grå 
+        skala på bilden så att texten blir lättare att se vid hoover. -->
         <div class="mj-grid-wraper">
+
           <div class="mj-wraper">
             <img class="blur zoom gray" src="images_mj/grid-1.jpg" alt="pol och strand">
             <div class="mj-content-wrap fade">
@@ -177,9 +209,10 @@
               Outdoor Swimming Pool: 1 <br>
               Barnbassäng: 1 <br>
             </div>
+
           </div>
           <!-- jag skapar flera klasseer ine i min klass som jag kan kalla på.
-          jag vill att alla bilder ska ha blur och zoom oxh fade -->
+          jag vill att alla bilder ska ha blur och zoom och fade -->
           <div class="mj-wraper">
             <img class="blur zoom gray" src="images_mj/grid-2.jpg" alt="mat">
             <div class="mj-content-wrap fade">
@@ -217,8 +250,12 @@
         </div>
       
 
+        <!-- här skapar jag mitt kontack formulär, försöker få den att 
+        likna den på vings sida. jag har satt en text-wrap så att den ska bli mer responsive.
+        trots bootstrap på detta dokument. känns tryggare så. -->
         <form class="mj-boka-form">
-          <h5>Var god fyll i formuläret nedan:</h5>
+          <h5>Var god fyll i formuläret nedan, <br> 
+          för att boka möte med någon av våra handläggare:</h5>
           <select name="mj-form-Avreseort" id="mj-form-1">
             <optgroup label="Avreseort">
               <option value="Stockholm-Arlanda">Stockholm-Arlanda</option>
@@ -242,53 +279,54 @@
           </select>  
         
           <div>
-            <label for="boka">Skriv datum för önskad avfärd:</label>
+            <label id="boka">Skriv datum för önskad avfärd:</label>
             <input type="text" placeholder="Skriv datum här">
           </div>
         
           <div>
-            <label for="mail">Skriv din mail här, så kontaktar vi dig:</label>
-            <input class="input" type="email" name="email" id="email" placeholder="Skriv din mail här:" > 
+            <label id="mail">Skriv din mail här, så kontaktar vi dig:</label>
+            <input size="30" placeholder="Skriv din mail här:"> 
           </div>
-          <button onclick="formel()" type="submit" value="submit" >Skicka in</button>          
+          <button class="mj-button" onclick="formel()" type="submit" value="submit">Skicka in</button>          
         </form>  
       </div>  
     </div> 
       
     <footer class="mj-footer">
-
       <div class="mj-footer-box">
-
-        <div class="mj-footer-icons">
-          <a class="mj-footer-icons-box-1" href="https://sv-se.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-          <a class="mj-footer-icons-box-2" href="https://twitter.com/?lang=en"><i class="fa-brands fa-x-twitter"></i></a>
-          <a class="mj-footer-icons-box-3" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i></a>
-        </div>
-
         <div class="mj-footer-contacts">
-          <h5 class="mj-footer-contacts-titel">Kontakta oss:</h5>
-          Viagem Brasil
+          <div class="mj-footer-icons">
+            <a class="mj-footer-icons-box-1" href="https://sv-se.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a class="mj-footer-icons-box-2" href="https://twitter.com/?lang=en"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="mj-footer-icons-box-3" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-instagram"></i></a>
+          </div>
           <br>
-          Turebergs gatan 88
+          <div>
+            <h5 class="mj-footer-contacts-titel">Kontakta oss:</h5>
+            Viagem Brasil
+            <br>
+            Turebergs gatan 88
+            <br>
+            937 78 UPPSALA
+            <br>
+            <br>
+            <span class="mj-footer-contacts_span">
+              <i class="fa-solid fa-phone"> 073-839 92 82</i>               
+            </span>
+          </div>
           <br>
-          937 78 UPPSALA
           <br>
-          <br>
-          <span class="mj-footer-contacts_span">
-            <i class="fa-solid fa-phone"> 073-839 92 82</i>               
-          </span>
+          <form class="mj-månadsbrev">
+            <p class="mj-månadsbrev_titel">Anmäl dig till månadsbrev</p> 
+            <label class="månadsbrev-mail" for="email">Skriv din mail här:</label><br>
+            <input class="mj-input" size="30" id="email" placeholder="Skriv mail här"> <br> <br>
+            <button class="mj-button" onclick="bekräftelse()" type="submit">Skicka</button>
+          </form>
         </div>
-        
-        <form class="mj-månadsbrev">
-          <h6 class="mj-månadsbrev_titel">Anmäl dig till månadsbrev</h6>
-          <br>
-          <label class="månadsbrev-mail" for="email">Skriv din mail här:</label><br>
-          <input class="mj-input" type="email" name="email" id="email" placeholder="Skriv mail här"> <br> <br>
-          <button onclick="bekräftelse()" type="submit">Skicka</button>
-        </form>
       </div>
     </footer> 
-      
+      <!-- sätter här mitt script till js funktion som ska alerta ett medelande när
+      kund trycker på knap för att skicka in formulär och skicka in mail. -->
     <script src="java-mj.js"></script>
   </body>
 </html>
