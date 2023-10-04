@@ -253,7 +253,14 @@ a:hover{
 /* här sätter jag minna inställningar till min header, Här använder jag ej
 bootstrap och har enbart en länk tillbacka till min index. detta för
 att kunna leka med koden mer,så skippar jag bootstrap */
-
+.mj-head-loga{
+  width: 200px;
+}
+.mj-head-rio{
+  padding-right: 7%;
+  padding-left: 4%;
+  justify-content: center;
+}
 .mj-content-rio{
   display: flex;
   flex-direction: column;
@@ -267,6 +274,8 @@ att kunna leka med koden mer,så skippar jag bootstrap */
   opacity: 0.9;
   width: 90%;
   display: flex;
+  width: fit-content;
+  text-wrap: wrap;
   flex-direction: column;
   margin-top: -5%;
   border-radius: 0.2em;
