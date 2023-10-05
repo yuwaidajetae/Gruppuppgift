@@ -65,7 +65,7 @@ img{
 .img-style { /*Stil för de tre nedre bilderna */
     border: 20px solid rgb(213, 228, 234);
     width: 10px;
-    height: 30px;
+    height: 400px;
 }
 
 .img-container {
