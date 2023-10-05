@@ -1,0 +1,375 @@
+/* vi har valt att ha separata css document
+då det kommer underlätta  mergen. Speciellt då
+css är lång, som i mitt fall. */
+*{
+  margin: 0;
+  padding: 0;
+}
+.mj-body{
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Source Sans 3', sans-serif;
+  background-color:rgb(249, 243, 239);
+}
+
+
+/* inställningar till min header där jag anvädner loggan
+  som layla tog fram till gruppen. jag ändrade bakrunds färgen dock,så att den
+  skulle passa min bakrund */
+  /* jag använder bootstrap här för att kunna få menyn responsive. Men i övrigt
+  vill jag, medan jag lär mig hålla mig borta från
+  bootstrap och liknande för att säkerställa att jag inte glömmer det
+  jag lärt mig. Men även för att kunna exprimentera med olika lösningar som bootstrap
+  blockar om jag lägger in det i dokumentet. Så jag valde att bara ha det på min index och
+  inte på de andra sidorna så att jag kan leka lite mer med koden där. */
+.mj-head{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2%;
+  padding-bottom: 2%;
+  border-bottom: 4px solid orange; 
+}
+.navbar navbar-expand-lg navbar-light bg-light{
+  background-color:rgb(249, 243, 239);
+  
+}
+.mj-head-link{
+  width: fit-content;
+  height: fit-content;
+  border-radius: 1em;
+  border: 1px solid gray;
+  background-color: rgb(252, 251, 251);
+  padding: 1%;
+  color: gray;
+}
+.mj-bild-buzios{
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20%;
+  margin-top: 3%;
+  background-image: url(images_mj/brazil-natur.jpg);
+  border-radius: 0.2rem;
+}
+h1,h2,h3,h4,h6{
+  text-decoration: underline orange;
+  display: inline;
+}
+.mj-button{
+  border-radius: 1em;
+  border: none;
+  padding: 3%;
+  color: white;
+  background-color: orangered;
+}
+
+/* Här startar själva innehållet i sidan,där jag informerar
+om vad premium paketet ska innehålla */
+.mj-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-bottom: 8%;
+  background-color: rgb(249, 243, 239);
+}
+.mj-main{
+  background-color: white;
+  opacity: 0.9;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -5%;
+  border-radius: 0.2em;
+  justify-content: center;
+  padding: 5%;
+  box-shadow: 1px 1px 8px rgb(202, 201, 201);
+}
+.mj-main-text img:hover{
+  transform: scale(1.4);
+  cursor: pointer;
+  padding: 1%;
+}
+.mj-main-intro{
+  border-bottom: 1px solid rgb(156, 154, 154);
+  padding: 3%;
+  margin-bottom: 8%;
+  text-align: center;
+}
+
+/* vecka för vecka chemat */
+
+/* vecka 1 */
+.mj-vecka-1{
+  margin-bottom: 8%;
+  border-bottom: 1px solid gray;
+  line-height: 2;
+}
+/* mj-vecka-2 */
+.mj-vecka-2{
+  line-height: 2;
+  margin-bottom: 6%;
+  border-bottom: 1px solid gray;
+  padding: 2%;
+}
+/* mj-vecka-3 */
+.mj-vecka-3{
+  padding: 2%;
+  line-height: 2;
+}
+.mj-vecka-3-image1:hover,.mj-vecka-3-image2:hover,.mj-vecka-3-blå-grotta:hover,.mj-vecka-3-blå-linbana:hover{
+  transform: scale(1.4);
+}
+
+
+/* mj-råd-text */
+.mj-råd h5{
+  border-bottom: 3px solid orange;
+  font-size: 2rem;
+  text-align:center;
+  padding-bottom: 2%;
+}
+.mj-råd-text{
+  text-align: center;
+  padding-top: 3%;
+  line-height: 1.5;
+  padding: 5%;
+  padding-top: 10%;
+  line-height: 1.5;
+}
+
+
+
+/* mj-grid-wraper*/
+/* inställningar för min container för att centrera bilderna med mer */
+.mj-grid-wraper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  margin-bottom: 15%;
+  margin-top: 7%;
+  padding: 3%;
+}
+.mj-wraper{
+  position: relative;
+  overflow: hidden;
+}
+.mj-wraper img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+.mj-content-wrap{
+  position: absolute;
+  inset: 0;
+  font-size: 1.1rem;
+  padding: 4%;
+  background: rgba(255, 255, 255, 0.4);
+  padding-top: 5%;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+} 
+/* här sätter jag mitt blur och fade och zoom och grå skala, så att det
+passar med sidan.svårt att få texten synlig dock trots svart. */
+.mj-wraper img,.mj-content-wrap{
+  transition: 200ms ease-in-out;
+} 
+.mj-wraper:hover img.blur {
+
+  filter: blur(15px);
+}
+.mj-wraper:hover img.gray {
+  filter: grayscale(0.8);
+}
+.mj-wraper:hover img.zoom {
+  transform: scale(1.1);
+}
+/* här ser jag till att texten kommer in och ut vid hoover,sammtidigt */
+.mj-wraper .mj-content-wrap, .fade {
+  opacity: 0;
+}
+.mj-wraper:hover .mj-content-wrap, .fade {
+  opacity: 1;
+}
+
+
+/* mj-boka-form */
+.mj-boka-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 1px 1px 8px rgb(184, 183, 183);
+  padding: 5%;
+  padding-bottom: 10%;
+  background-color: rgb(253, 195, 87);
+  margin-bottom: 5%;
+  flex-wrap: wrap;
+  border-radius: 0.5em;
+}
+
+
+
+/* mj-footer */
+.mj-footer{
+  border-top: 4px solid orange;
+  padding-top: 4%;
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: space-around;
+  text-wrap: wrap; 
+}
+.mj-footer-contacts{
+ flex-direction: row;
+ display: flex;
+ justify-content: center;
+ gap: 7rem;
+ align-items: center;
+ align-content: center;
+}
+.mj-månadsbrev{
+  font-size: 1.2rem;
+}
+.mj-footer-icons{
+  font-size: 2rem;
+}
+/* länkar inställningar för minna länkar */
+a link{
+  color: gray;
+}
+a:visited{
+  color: black;
+}
+a:hover{
+  color: blue;
+}
+
+
+
+/* Ny HTML sida för mj-rio */
+
+/* här sätter jag minna inställningar till min header, Här använder jag ej
+bootstrap och har enbart en länk tillbacka till min index. detta för
+att kunna leka med koden mer,så skippar jag bootstrap */
+.mj-head-loga{
+  width: 200px;
+}
+.mj-head-rio{
+  padding-right: 7%;
+  padding-left: 4%;
+  justify-content: center;
+}
+.mj-content-rio{
+  display: flex;
+  flex-direction: column;
+  margin-top: -5%;
+  border-radius: 0.2em;
+  justify-content: center;
+  padding: 5%;
+}
+.mj-main-rio{
+  background-color: white;
+  opacity: 0.9;
+  width: 90%;
+  display: flex;
+  width: fit-content;
+  text-wrap: wrap;
+  flex-direction: column;
+  margin-top: -5%;
+  border-radius: 0.2em;
+  justify-content: center;
+  padding: 5%;
+  box-shadow: 1px 1px 8px rgb(202, 201, 201);
+}
+.mj-bild-rio-hotel{
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20%;
+  margin-top: 3%;
+  background-image: url(images_mj/hotell-bild.jpg);
+}
+.material-symbols-outlined{
+  padding-bottom: 4%;
+  color: rgb(250, 184, 61);
+}
+
+
+/* min silder bar, det är bland annat denna bar jag refererar till,varför jag 
+tar bort bootstrap.bootstrap verkar blockera de inställningarna jag satt.
+kanske för att bootstrap readan har det färdigt. men jag vill endså gör min kod. */
+.slider-box-rio {
+	padding: 2rem;
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+.slider-wrapper {
+	position: relative;
+	max-width: 40rem;
+	margin: 0 auto;
+}
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+}
+
+/* gömmer här min scrollbar */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+}
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+.slider-nav a {
+	width: 0.8rem;
+	height: 0.8rem;
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+
+/* ny html för sida Bucaneiro-mj */
+.mj-hotell-buzios{
+  background-size:cover;
+  background-repeat: no-repeat;
+  padding: 20%;
+  margin-top: 3%;
+  background-image: url(images_mj/hotel-buzios.jpg);
+}
+.mj-titel-buzi{
+  font-size: 3rem;
+}
+
+/* media querys till mj-huvud index-footer. vill ha footer som column
+vid mindre screens*/
+@media screen and (max-width:800px) {
+  .mj-footer-contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    text-align: center;
+  }
+}
