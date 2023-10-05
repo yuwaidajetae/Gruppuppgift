@@ -65,7 +65,7 @@ img{
     margin-top: 25px;
 }
 /*Responsive anpassad*/ 
-@media only screen and(min-width: 768px) and (max-width:991px) {
+@media screen and (min-width: 768px) and (max-width:991px) {
     .carousel-caption{
         bottom: 370px;
     }
@@ -74,7 +74,7 @@ img{
     }
     
 }
-@media only screen and (max-width: 767px){
+@media screen and (max-width: 767px){
     .carousel-caption{
         bottom: 125px;
     }
