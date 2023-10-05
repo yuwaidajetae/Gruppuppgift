@@ -1,3 +1,8 @@
+/*Typsnitt*/
+*{
+    font-family: montserrat;
+
+}
 .navbar-brand img{
     width: 250px;
 }
@@ -5,7 +10,7 @@
 .rubrik{
     background-image: url(familjepaket-utsikt.jpg);
     color: white;
-    padding-top: 175px;
+    padding-top: 150px;
     padding-bottom: 150px;
     background-size: cover;
     /*bilden täcker hela hemsidan*/

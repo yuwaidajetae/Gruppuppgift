@@ -1,0 +1,116 @@
+
+.navbar-brand {
+    width: 250px;
+    
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 6vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 4px 4px black;
+    }
+
+.city {
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    
+
+}
+
+.description {
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+    font-style: italic;
+   
+}
+
+
+/*sätter bredden på ett HTML-element till 100%*/
+.w-100{
+    height: 100vh;
+}
+.col{
+    padding: 20px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    width: 700px;
+}
+
+.header2 {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+
+}
+
+.container {
+    width: 100%;
+}
+
+
+
+.container2{
+    display: flex;
+    column-gap: 10px;
+    margin-top: 10px;
+    align-items: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+    justify-content: center;
+
+
+}
+
+.column-1{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    
+
+    }
+
+.column-2 {
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    
+}
+
+h2 {
+    font-family: helvetica;
+    color: rgb(87, 83, 83);
+}
+
+.picture1, .picture2, .picture3 {
+    width: 33%;
+    float: left;
+    padding: 2px;
+
+    }
+
+    button{
+        background-color: green;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        
+    }
+
+    .footer {
+        text-align: center;
+        background-color: #f9f5f1;
+    
+    }
+
